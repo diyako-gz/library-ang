@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BooksSHowComponent } from './books-show/books-show.component';
 import { BookPagComponent } from './book-pag/book-pag.component';
+import { FilterPipe } from './filter-pipe.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BooksSHowComponent,
-    BookPagComponent
+    BookPagComponent,
+    FilterPipe ,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule ,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
