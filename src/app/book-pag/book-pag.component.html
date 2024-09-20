@@ -1,5 +1,5 @@
-<div *ngFor="let bookData of showData" class="flex justify-center mt-[50px]">
-  <div *ngIf="bookData.id == Id" class="bg-gray-800 rounded-xl p-[10px] w-[400px] h-[100px]">
+<div *ngFor="let bookData of showData" class="flex justify-center">
+  <div *ngIf="bookData.id == Id" class="bg-gray-800 rounded-xl mt-[10px] p-[10px] w-[400px] h-[100px]">
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{bookData.name}}</h5>
     <p class="font-normal text-gray-700 dark:text-gray-400">{{bookData.price}}</p>
   </div>
