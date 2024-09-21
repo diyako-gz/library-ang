@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BooksSHowComponent } from './books-show/books-show.component';
 import { BookPagComponent } from './book-pag/book-pag.component';
-import { FilterPipe } from './filter-pipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { FilteredPipe } from './filtered.pipe';
+import { FilterResComponent } from './filter-res/filter-res.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     BooksSHowComponent,
     BookPagComponent,
-    FilterPipe ,
+    FilteredPipe,
+    FilterResComponent ,
   ],
   imports: [
     BrowserModule,

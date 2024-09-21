@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BookDataService } from '../book-data.service';
-import { FilterPipe } from '../filter-pipe.pipe';
 
 @Component({
   selector: 'app-home',
@@ -16,4 +15,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.bookDatas = this.bookData.bookData;
   }
+
 }
