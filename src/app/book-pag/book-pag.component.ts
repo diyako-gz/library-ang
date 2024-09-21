@@ -19,4 +19,5 @@ export class BookPagComponent implements OnInit {
     this.Id = selectedBook;
     this.showData = this.bookPagData.bookData;
   }
+  
 }

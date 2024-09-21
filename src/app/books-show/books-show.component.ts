@@ -10,23 +10,30 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BooksSHowComponent implements OnInit {
   books: any = [];
-  constructor(private bookDatas: BookDataService, private router: Router , private activeRout: ActivatedRoute) {}
-
+  constructor(
+    private bookDatas: BookDataService,
+    private router: Router,
+    private activeRout: ActivatedRoute
+  ) {}
+  priceStatus: string = '';
   ngOnInit(): void {
     this.books = this.bookDatas.bookData;
   }
   priceChecker(price: number) {
     if (price > 50000) {
-      return 'red';
+      this.priceStatus = 'higher'
+      return 'red'
     } else {
+      this.priceStatus = 'good'
       return 'green';
     }
   }
-  bgChecker(status: boolean) {
-    if (status) {
+  bgChecker(status: any) {
+    if (status == 'we have this book in store') {
       return '';
     } else {
       return 'gray';
     }
   }
+  
 }
