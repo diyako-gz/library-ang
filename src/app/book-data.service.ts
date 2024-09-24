@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,5 +20,32 @@ export class BookDataService {
     {id:9 , name:'siyasat tamiz' , price: 88000 , status: 'we dont have this book soryy'},
     {id:10 , name:'englich book' , price: 54000  , status: 'we dont have this book soryy'},
   ]
+  public usersData = [
+    {id:1 , name: 'reza' , email:'reza@gmail.com' , password: '2264'} ,
+    {id:2 , name: 'amir' , email:'amir@gmail.com' , password: '1987'} ,
+    {id:3 , name: 'diyako' , email:'diyako@gmail.com' , password: '2645'} ,
+    {id:4 , name: 'korosh' , email:'korosh@gmail.com' , password: '1865'} ,
+    {id:5 , name: 'amin' , email:'amin@gmail.com' , password: '1907'} ,
+    {id:6 , name: 'amir ali' , email:'amirAli@gmail.com' , password: '6547'} ,
+    {id:7 , name: 'michael' , email:'michael@gmail.com' , password: '8576'} ,
+    {id:8 , name: 'david' , email:'david@gmail.com' , password: '1234'} ,
+    {id:9 , name: 'mohamad' , email:'mohamad@gmail.com' , password: '7263'} ,
+    {id:10 , name: 'sasan' , email:'sasan@gmail.com' , password: '7362'} ,
+  ]
+  userEmail: string = ''
+  userPassword: string = ''
 
+  getUserEmail(): string {
+    return this.usersData[0].email
+  } 
+  getUserPassword(): string {
+    return this.usersData[0].password
+  }
+  setUserEmail(email: string) {
+    this.userEmail = email;
+  }
+
+  setUserPassword(pass: string) {
+    this.userPassword = pass;
+  }
 }

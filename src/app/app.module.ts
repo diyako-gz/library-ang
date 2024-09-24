@@ -9,6 +9,7 @@ import { BookPagComponent } from './book-pag/book-pag.component';
 import { FormsModule } from '@angular/forms';
 import { FilteredPipe } from './filtered.pipe';
 import { FilterResComponent } from './filter-res/filter-res.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FilterResComponent } from './filter-res/filter-res.component';
     BooksSHowComponent,
     BookPagComponent,
     FilteredPipe,
-    FilterResComponent ,
+    FilterResComponent,
+    LogInComponent ,
   ],
   imports: [
     BrowserModule,
