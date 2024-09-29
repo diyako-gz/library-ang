@@ -49,10 +49,4 @@ export class BookDataService {
   setUserPassword(pass: string) {
     this.userPassword = pass;
   }
-  UserStatus() {
-    this.usersData[0].status
-  }
-  setUserStatus(status : string) {
-    this.userStatus = status;
-  }
 }

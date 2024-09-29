@@ -11,7 +11,6 @@ export class LoginCheakGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     if(this.userData.userStatus === 'user in acc') {
-      
       return true
     } else {
       this.router.navigate(['/log-in']);
