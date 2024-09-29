@@ -26,7 +26,7 @@ import { LogInComponent } from './log-in/log-in.component';
     AppRoutingModule ,
     FormsModule
   ],
-  providers: [],
+  providers: [LogInComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

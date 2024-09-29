@@ -21,19 +21,20 @@ export class BookDataService {
     {id:10 , name:'englich book' , price: 54000  , status: 'we dont have this book soryy'},
   ]
   public usersData = [
-    {id:1 , name: 'reza' , email:'reza@gmail.com' , password: '2264'} ,
-    {id:2 , name: 'amir' , email:'amir@gmail.com' , password: '1987'} ,
-    {id:3 , name: 'diyako' , email:'diyako@gmail.com' , password: '2645'} ,
-    {id:4 , name: 'korosh' , email:'korosh@gmail.com' , password: '1865'} ,
-    {id:5 , name: 'amin' , email:'amin@gmail.com' , password: '1907'} ,
-    {id:6 , name: 'amir ali' , email:'amirAli@gmail.com' , password: '6547'} ,
-    {id:7 , name: 'michael' , email:'michael@gmail.com' , password: '8576'} ,
-    {id:8 , name: 'david' , email:'david@gmail.com' , password: '1234'} ,
-    {id:9 , name: 'mohamad' , email:'mohamad@gmail.com' , password: '7263'} ,
-    {id:10 , name: 'sasan' , email:'sasan@gmail.com' , password: '7362'} ,
+    {id:1 , name: 'reza' , email:'reza@gmail.com' , password: '2264' , status : 'user in acc'} ,
+    {id:2 , name: 'amir' , email:'amir@gmail.com' , password: '1987' , status : 'user NOT in acc'} ,
+    {id:3 , name: 'diyako' , email:'diyako@gmail.com' , password: '2645' , status : 'user in acc'} ,
+    {id:4 , name: 'korosh' , email:'korosh@gmail.com' , password: '1865' , status : 'user NOT in acc'} ,
+    {id:5 , name: 'amin' , email:'amin@gmail.com' , password: '1907' , status : 'user NOT in acc'} ,
+    {id:6 , name: 'amir ali' , email:'amirAli@gmail.com' , password: '6547' , status : 'user NOT in acc'} ,
+    {id:7 , name: 'michael' , email:'michael@gmail.com' , password: '8576' , status : 'user in acc'} ,
+    {id:8 , name: 'david' , email:'david@gmail.com' , password: '1234' , status : 'user in acc'} ,
+    {id:9 , name: 'mohamad' , email:'mohamad@gmail.com' , password: '7263' , status : 'user in acc'} ,
+    {id:10 , name: 'sasan' , email:'sasan@gmail.com' , password: '7362' , status : 'user NOT in acc'} ,
   ]
   userEmail: string = ''
   userPassword: string = ''
+  userStatus: string = '' 
 
   getUserEmail(): string {
     return this.usersData[0].email
@@ -47,5 +48,11 @@ export class BookDataService {
 
   setUserPassword(pass: string) {
     this.userPassword = pass;
+  }
+  UserStatus() {
+    this.usersData[0].status
+  }
+  setUserStatus(status : string) {
+    this.userStatus = status;
   }
 }

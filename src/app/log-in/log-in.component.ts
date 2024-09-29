@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 import { BookDataService } from '../book-data.service';
 
 @Component({
@@ -8,24 +8,23 @@ import { BookDataService } from '../book-data.service';
   styleUrls: ['./log-in.component.css'],
 })
 export class LogInComponent implements OnInit {
-  constructor(private userData: BookDataService, private router: Router) {}
+  constructor(private userDatas: BookDataService) {}
 
   userEmail: string = '';
   userPassword: string = '';
-
   ngOnInit(): void {}
 
   userCheacker(email: string, pass: string) {
-    const data = this.userData.usersData.find(
+    const data = this.userDatas.usersData.find(
       (user) => user.email === email && user.password === pass
     );
-    if (data) {
-      this.userData.setUserEmail(email);
-      this.userData.setUserPassword(pass);
-      console.log('User logged in successfully!');
-      this.router.navigate(['/books']);
+    if(data) {
+      this.userDatas.userStatus = 'user in acc'
+      console.log(this.userDatas.userStatus);
     } else {
-      console.log('Invalid email or password!');
+      this.userDatas.userStatus = 'user NOT in acc'
+      console.log(this.userDatas.userStatus);
+      
     }
   }
 }

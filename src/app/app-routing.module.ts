@@ -4,11 +4,12 @@ import { BookPagComponent } from './book-pag/book-pag.component';
 import { BooksSHowComponent } from './books-show/books-show.component';
 import { FilterResComponent } from './filter-res/filter-res.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { LoginCheakGuard } from './login-cheak.guard';
 
 
 const routes: Routes = [
   {path:'book-pag/:id' , component: BookPagComponent } ,
-  {path:'books' , component : BooksSHowComponent , canActivate: [LogInComponent]} ,
+  {path:'books' , component : BooksSHowComponent , canActivate: [LoginCheakGuard]} ,
   {path: 'search' , component : FilterResComponent} ,
   {path: 'log-in' , component : LogInComponent} ,
 ];
